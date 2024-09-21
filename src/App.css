@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background-color:  rgb(223, 216, 216);
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #7a7a7a;
+}
+
+
+
+
+
+
+
+
+.user-item:hover {
+  background-color: #ddd;
+}
+
+
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.message {
+  padding: 10px;
+  
+  max-width: 60%;
+  word-wrap: break-word;
+}
+.chat-box{
+height:85vh;
+overflow-y:scroll;
+}
+
+.message.sent {
+   background-color: #007bff;
+   color: white;
+  align-self: flex-end;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 8px;
+}
+
+.message.received {
+  background-color: #f1f1f1;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  align-self: flex-start;
+}
+
+.message.sent.emoji {
+  background-color: white;
+  font-size: 24px;
+  align-self: flex-end;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  color:gray;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.input{
+  width: 950px;
+ border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 8px;
+
+
+
+}
+
+.summary{
+  margin:24px;
+  background-color: #007bff;
+  color:white;
+  padding: 24px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 8px;
+
+}
+.chat-footer button {
+  margin-left: 10px;
+ width: 40px;
+ height: 40px;
+  border-radius:50%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* App.css */
+
+/* Style for the user list */
+.user-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  height: 90%;
+  overflow-y: scroll;
+  
+}
+
+/* Style for each user item */
+/* App.css */
+
+/* Container for the user item */
+.user-item {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Add padding */
+  border-bottom: 1px solid #ddd; /* Optional: Add a border between items */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative; /* Position relative for absolute positioning of message channel icon */
+}
+
+/* Style for the avatar */
+.avatar {
+  width: 40px; /* Set a fixed width for avatar */
+  height: 40px; /* Set a fixed height for avatar */
+  border-radius: 50%; /* Make the avatar circular */
+  margin-right: 10px; /* Add space between avatar and text */
+  position: relative; /* Position relative for absolute positioning of message channel icon */
+}
+
+/* Style for the message channel icon */
+.message-channel-icon {
+  position: absolute; /* Absolute positioning within avatar */
+  bottom: 5px; /* Align to the bottom */
+  left: 35px; /* Align to the right */
+  width: 20px; /* Set width for message channel icon */
+  height: 20px; /* Set height for message channel icon */
+  border-radius: 50%; /* Make the icon circular */
+  background-color: #fff; /* Optional: Add background color */
+  border: 2px solid #ddd; /* Optional: Add border to icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.user-item.active {
+  background-color: #5d9ef3; /* Highlight active item */
+  color: white;
+  border-radius: 12px;
+  
+}
+
+.user-item.active .time{
+  color: white;
+}
+
+/* Style for user info container */
+.user-info {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width for spacing */
+  justify-content: space-between; /* Space out children */
+}
+
+
+.f-info {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width for spacing */
+flex-direction: row;}
+
+
+
+/* Optionally, add styles for the user name and time to align text */
+.user-name {
+  margin-left:10px;
+  font-weight: bold; /* Make the user name bold */
+ 
+}
+
+/* Optionally, add styles for the time */
+.time {
+  color: #888; /* Set a color for time */
+}
+
+
+
+
+
+
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  gap:12px;
+  border-top:1px solid grey;
+  padding: 8px;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* App.css */
+.sidebar .filter-buttons button {
+  background: transparent;
+  border: none;
+  color: grey;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sidebar .filter-buttons button.active {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+.user-list::-webkit-scrollbar{
+  width: 0;
+}
+
+/* Add other necessary styles */
+
+
+.light{
+  display: flex;
+  align-items: center;
+gap:4px;
+  justify-content: space-between;
+}
+.box-red,.box-green,.box-orange{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.box-green{
+  background-color: green;
+}
+
+.box-orange{
+  background-color: orange;
+}
+
+.box-red{
+  background-color: red;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+  gap:4px;
+  justify-content: space-between;
+  color:grey;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
+.chat-profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:4px;
+}
+
+.chat-icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:24px;
+  opacity: 0.8;
+  color:gray;
+}
+
+.chat-message-box{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+.chat-name{
+  font-size: 18px;
+  font-weight: bold;
+}
