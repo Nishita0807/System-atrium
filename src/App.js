@@ -37,7 +37,7 @@ import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined
 
 const summarizeConversation = async (conversation) => {
   try {
-    const response = await fetch('https://system-atrium-vyk9.vercel.app/api/summarize', {
+    const response = await fetch('https://system-atrium-lxf5.vercel.app/api/summarize', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const summarizeConversation = async (conversation) => {
     // Function to fetch API data
     const fetchData = async () => {
       try {
-        const response = await fetch('https://system-atrium-vyk9.vercel.app/api/users'); // Replace with your API URL
+        const response = await fetch('https://system-atrium-lxf5.vercel.app/api/users'); // Replace with your API URL
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
@@ -360,7 +360,7 @@ const ChatWindow = ({ selectedUser = {} ,users,setUsers,filter}) => {
     const updatedConversation = [...conversation, newMessage];
   
     try {
-      const response = await axios.post(`https://system-atrium-vyk9.vercel.app/api/users/${selectedUser.name}/send-message`, {
+      const response = await axios.post(`https://system-atrium-lxf5.vercel.app/api/users/${selectedUser.name}/send-message`, {
         message: inputValue,
       }, {
         headers: {
